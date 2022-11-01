@@ -1,0 +1,19 @@
+.item {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightgrey;
+    color: lightgrey;
+    text-align: center;
+    margin: 5px;
+}
+
+.item p {
+    font-size: 47px;
+}
+
+.clicked {
+    background: white;
+}

@@ -1,22 +1,22 @@
-import React, {MouseEventHandler} from "react";
+import React from "react";
+import {Item} from "../../types";
 
 interface Props {
-  item: boolean;
+  item: Item;
   onClick: React.MouseEventHandler;
 }
 
 const Cell: React.FC<Props> = (props) => {
 
-  const cellStyle: React.CSSProperties = {
-    display: 'inline-block',
-    width: '60px',
-    height: '60px',
-    background: 'lightgrey',
-    border: '1px',
-  };
+  const myStyle = ['item'];
+
+  if (props.item.clicked) {
+    myStyle.push('clicked');
+  }
+
   return (
-    <div style={cellStyle} onClick={props.onClick}>
-      {props.item}
+    <div className={myStyle.join(' ')} onClick={props.onClick}>
+      <p>{props.item.hasItem? '*' : ''}</p>
     </div>
   )
 }

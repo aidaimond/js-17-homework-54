@@ -5,12 +5,15 @@ interface Props {
 }
 
 const TriesAmount: React.FC<Props> = ({triesAmount}) => {
+
+  const triesStyle: React.CSSProperties = {
+    marginTop: '20px',
+  }
   return (
-    <div>
+    <div style={triesStyle}>
       Tries: {triesAmount}
     </div>
   )
 }
-
 
 export default TriesAmount
